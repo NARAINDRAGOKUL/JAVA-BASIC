@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter string :");
+		String input = sc.nextLine();
+		Pattern pattern = Pattern.compile("[aeiouAEIOU]");
+		Matcher matcher = pattern.matcher(input);
+	
+	 if (matcher.find()) {
+            System.out.println("The string contains at least one vowel.");
+        } else {
+            System.out.println("No vowels found in the string.");
+        }
+
+        sc.close();
+		
+	}
+}
+OUTPUT
+Enter string :TYKH
+No vowels found in the string.
